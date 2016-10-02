@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.oxerr.spring.security.wechat.samples.helloworld.WeChatProperties;
-import org.oxerr.spring.security.wechat.web.AbstractSimpleRedirectWeChatService;
+import org.oxerr.spring.security.wechat.web.AbstractJavaScriptRedirectWeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.foxinmy.weixin4j.mp.api.OauthApi;
 
 @Service
-public class WeChatServiceImpl extends AbstractSimpleRedirectWeChatService {
+public class WeChatServiceImpl extends AbstractJavaScriptRedirectWeChatService {
 
 	private final Logger log = LogManager.getLogger();
 
