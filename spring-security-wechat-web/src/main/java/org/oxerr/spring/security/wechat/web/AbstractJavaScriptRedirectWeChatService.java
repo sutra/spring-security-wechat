@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.oxerr.spring.security.wechat.core.WeChatMessageSource;
+import org.springframework.context.MessageSource;
+import org.springframework.context.MessageSourceAware;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.util.FileCopyUtils;
 
-public abstract class AbstractJavaScriptRedirectWeChatService
-		extends AbstractSimpleRedirectWeChatService {
+public abstract class AbstractJavaScriptRedirectWeChatService extends
+		AbstractSimpleRedirectWeChatService implements MessageSourceAware {
 
-	private MessageSourceAccessor messages = WeChatMessageSource.getAccessor();
+	protected MessageSourceAccessor messages = WeChatMessageSource.getAccessor();
 	private final String template;
 
 	public AbstractJavaScriptRedirectWeChatService() {
@@ -28,6 +30,14 @@ public abstract class AbstractJavaScriptRedirectWeChatService
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void setMessageSource(MessageSource messageSource) {
+		this.messages = new MessageSourceAccessor(messageSource);
 	}
 
 	/**
