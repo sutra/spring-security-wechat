@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.oxerr.spring.security.wechat.samples.helloworld.WeChatProperties;
-import org.oxerr.spring.security.wechat.web.WeChatService;
+import org.oxerr.spring.security.wechat.web.AbstractSimpleRedirectWeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.foxinmy.weixin4j.mp.api.OauthApi;
 
 @Service
-public class WeChatServiceImpl implements WeChatService {
+public class WeChatServiceImpl extends AbstractSimpleRedirectWeChatService {
 
 	private final Logger log = LogManager.getLogger();
 
@@ -36,13 +36,13 @@ public class WeChatServiceImpl implements WeChatService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void redirectToAuthorize(HttpServletRequest request,
+	public String getAuthorizationURL(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String redirectUri = this.getRedirectUri(request);
 		String state = null;
 		String scope = "snsapi_userinfo";
 		String url = oauthApi.getAuthorizeURL(redirectUri, state, scope);
-		response.sendRedirect(url);
+		return url;
 	}
 
 	private String getRedirectUri(HttpServletRequest request) {
