@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.oxerr</groupId>
 		<artifactId>spring-security-wechat</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>spring-security-wechat-web</artifactId>
 	<name>Spring Security WeChat Web</name>
