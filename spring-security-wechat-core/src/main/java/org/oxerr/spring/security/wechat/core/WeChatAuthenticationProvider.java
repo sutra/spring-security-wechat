@@ -7,14 +7,13 @@ import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.SpringSecurityMessageSource;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.Assert;
 
 public class WeChatAuthenticationProvider implements AuthenticationProvider,
 		InitializingBean, MessageSourceAware {
 
-	protected MessageSourceAccessor messages = SpringSecurityMessageSource.getAccessor();
+	protected MessageSourceAccessor messages = WeChatMessageSource.getAccessor();
 	private final WeChatUserDetailsService weChatUserDetailsService;
 
 	public WeChatAuthenticationProvider(WeChatUserDetailsService weChatUserDetailsService) {

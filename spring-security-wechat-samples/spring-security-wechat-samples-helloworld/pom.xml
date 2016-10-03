@@ -8,15 +8,18 @@
 	<parent>
 		<groupId>org.oxerr</groupId>
 		<artifactId>spring-security-wechat-samples</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>spring-security-wechat-samples-helloworld</artifactId>
+	<properties>
+		<spring-boot.version>1.4.1.RELEASE</spring-boot.version>
+	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.4.1.RELEASE</version>
+				<version>${spring-boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -75,6 +78,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version>
 			</plugin>
 		</plugins>
 	</build>
