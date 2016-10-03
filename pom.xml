@@ -11,6 +11,7 @@
 	<packaging>pom</packaging>
 	<name>Spring Security WeChat</name>
 	<description>Spring Security WeChat.</description>
+	<url>https://oxerr.org/spring-security-wechat</url>
 	<inceptionYear>2016</inceptionYear>
 	<licenses>
 		<license>
