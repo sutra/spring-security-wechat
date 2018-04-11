@@ -41,7 +41,7 @@ public class WeChatServiceImpl extends AbstractJavaScriptRedirectWeChatService {
 		String redirectUri = this.getRedirectUri(request);
 		String state = null;
 		String scope = "snsapi_userinfo";
-		String url = oauthApi.getAuthorizeURL(redirectUri, state, scope);
+		String url = oauthApi.getUserAuthorizationURL(redirectUri, state, scope);
 		return url;
 	}
 

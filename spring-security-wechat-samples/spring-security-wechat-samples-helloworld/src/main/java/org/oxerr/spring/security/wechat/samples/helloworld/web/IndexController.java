@@ -14,6 +14,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.foxinmy.weixin4j.mp.model.User;
+
 @Controller
 @RolesAllowed("ROLE_USER")
 public class IndexController {
@@ -25,7 +27,8 @@ public class IndexController {
 		HttpServletResponse response
 	) throws IOException {
 
-		String nickname = ((WeChatUserDetails) authentication.getPrincipal()).getUser().getNickName();
+		User user = ((WeChatUserDetails) authentication.getPrincipal()).getUser();
+		String nickname = user.getNickName();
 
 		response.setCharacterEncoding(StandardCharsets.UTF_8.name());
 		response.setContentType("text/plain");

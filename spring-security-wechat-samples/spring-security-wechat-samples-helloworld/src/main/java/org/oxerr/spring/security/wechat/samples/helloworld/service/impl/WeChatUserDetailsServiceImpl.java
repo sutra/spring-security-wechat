@@ -29,8 +29,8 @@ public class WeChatUserDetailsServiceImpl implements WeChatUserDetailsService {
 	public UserDetails loadUserByCode(String code)
 			throws AuthenticationException {
 		try {
-			OauthToken oauthToken = oauthApi.getOauthToken(code);
-			User user = oauthApi.getUser(oauthToken);
+			OauthToken oauthToken = oauthApi.getAuthorizationToken(code);
+			User user = oauthApi.getAuthorizationUser(oauthToken);
 			return new WeChatUserDetails(user);
 		} catch (WeixinException e) {
 			throw new BadCredentialsException(e.getMessage(), e);
