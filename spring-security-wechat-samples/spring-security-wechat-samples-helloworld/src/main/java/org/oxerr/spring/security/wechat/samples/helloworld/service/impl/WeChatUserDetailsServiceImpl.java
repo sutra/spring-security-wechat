@@ -1,6 +1,6 @@
 package org.oxerr.spring.security.wechat.samples.helloworld.service.impl;
 
-import org.oxerr.spring.security.wechat.core.WeChatUserDetailsService;
+import org.oxerr.spring.security.wechat.core.userdetails.WeChatUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.AuthenticationException;

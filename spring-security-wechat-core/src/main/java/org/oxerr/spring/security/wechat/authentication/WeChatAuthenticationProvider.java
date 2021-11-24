@@ -1,5 +1,8 @@
-package org.oxerr.spring.security.wechat.core;
+package org.oxerr.spring.security.wechat.authentication;
 
+import org.oxerr.spring.security.wechat.core.AuthDenyException;
+import org.oxerr.spring.security.wechat.core.WeChatMessageSource;
+import org.oxerr.spring.security.wechat.core.userdetails.WeChatUserDetailsService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.MessageSource;
 import org.springframework.context.MessageSourceAware;

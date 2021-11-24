@@ -1,8 +1,8 @@
 package org.oxerr.spring.security.wechat.samples.helloworld;
 
 import org.oxerr.spring.security.wechat.config.annotation.web.configurers.WeChatLoginConfigurer;
-import org.oxerr.spring.security.wechat.core.WeChatUserDetailsService;
-import org.oxerr.spring.security.wechat.web.WeChatService;
+import org.oxerr.spring.security.wechat.core.userdetails.WeChatUserDetailsService;
+import org.oxerr.spring.security.wechat.web.authentication.WeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

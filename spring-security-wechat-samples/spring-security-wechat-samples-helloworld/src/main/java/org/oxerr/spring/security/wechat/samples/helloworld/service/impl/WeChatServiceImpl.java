@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.oxerr.spring.security.wechat.samples.helloworld.WeChatProperties;
-import org.oxerr.spring.security.wechat.web.AbstractJavaScriptRedirectWeChatService;
+import org.oxerr.spring.security.wechat.web.authentication.AbstractJavaScriptRedirectWeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
