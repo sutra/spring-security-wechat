@@ -7,10 +7,11 @@
 		https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.oxerr.spring.security</groupId>
+		<groupId>org.oxerr.spring.security.wechat</groupId>
 		<artifactId>spring-security-wechat</artifactId>
 		<version>0.0.3</version>
 	</parent>
+	<groupId>org.oxerr.spring.security.wechat.samples</groupId>
 	<artifactId>spring-security-wechat-samples</artifactId>
 	<packaging>pom</packaging>
 	<name>Spring Security WeChat Samples</name>

@@ -7,23 +7,14 @@
 		https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.oxerr.spring.security</groupId>
+		<groupId>org.oxerr.spring.security.wechat.samples</groupId>
 		<artifactId>spring-security-wechat-samples</artifactId>
 		<version>0.0.3</version>
 	</parent>
 	<artifactId>spring-security-wechat-samples-helloworld</artifactId>
 	<properties>
-		<spring-boot.version>2.5.2</spring-boot.version>
+		<spring-boot.version>2.6.0</spring-boot.version>
 	</properties>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring-boot.version}</version>
-			</plugin>
-		</plugins>
-	</build>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -70,7 +61,7 @@
 			<version>1.10.0</version>
 		</dependency>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>org.oxerr.spring.security.wechat</groupId>
 			<artifactId>spring-security-wechat-config</artifactId>
 			<version>${project.version}</version>
 		</dependency>

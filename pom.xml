@@ -11,7 +11,7 @@
 		<artifactId>oxerr-parent</artifactId>
 		<version>1.4.0</version>
 	</parent>
-	<groupId>org.oxerr.spring.security</groupId>
+	<groupId>org.oxerr.spring.security.wechat</groupId>
 	<artifactId>spring-security-wechat</artifactId>
 	<version>0.0.3</version>
 	<packaging>pom</packaging>
