@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>com.foxinmy</groupId>
 			<artifactId>weixin4j-mp</artifactId>
-			<version>1.9.1</version>
+			<version>1.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
