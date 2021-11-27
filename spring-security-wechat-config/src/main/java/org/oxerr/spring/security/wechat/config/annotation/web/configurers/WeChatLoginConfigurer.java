@@ -1,9 +1,9 @@
 package org.oxerr.spring.security.wechat.config.annotation.web.configurers;
 
-import org.oxerr.spring.security.wechat.core.WeChatAuthenticationProvider;
-import org.oxerr.spring.security.wechat.core.WeChatUserDetailsService;
-import org.oxerr.spring.security.wechat.web.WeChatAuthenticationFilter;
-import org.oxerr.spring.security.wechat.web.WeChatService;
+import org.oxerr.spring.security.wechat.authentication.WeChatAuthenticationProvider;
+import org.oxerr.spring.security.wechat.core.userdetails.WeChatUserDetailsService;
+import org.oxerr.spring.security.wechat.web.authentication.WeChatAuthenticationFilter;
+import org.oxerr.spring.security.wechat.web.authentication.WeChatService;
 import org.springframework.security.config.annotation.web.HttpSecurityBuilder;
 import org.springframework.security.config.annotation.web.configurers.AbstractAuthenticationFilterConfigurer;
 import org.springframework.security.web.authentication.logout.LogoutFilter;

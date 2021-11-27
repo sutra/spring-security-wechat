@@ -1,4 +1,4 @@
-package org.oxerr.spring.security.wechat.web;
+package org.oxerr.spring.security.wechat.web.authentication;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
