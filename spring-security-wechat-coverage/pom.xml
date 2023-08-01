@@ -7,14 +7,28 @@
 	<parent>
 		<groupId>org.oxerr.spring.security.wechat</groupId>
 		<artifactId>spring-security-wechat</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
+		<version>0.0.5</version>
 	</parent>
 	<artifactId>spring-security-wechat-coverage</artifactId>
 	<name>Spring Security WeChat Coverage</name>
 	<description>Compute aggregated test code coverage.</description>
 	<properties>
+		<maven.install.skip>true</maven.install.skip>
 		<maven.deploy.skip>true</maven.deploy.skip>
+		<gpg.skip>true</gpg.skip>
+		<skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
 	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<skipIfEmpty>true</skipIfEmpty>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
