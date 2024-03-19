@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.oxerr.spring.security.wechat</groupId>
 		<artifactId>spring-security-wechat</artifactId>
-		<version>0.0.6</version>
+		<version>0.0.7-SNAPSHOT</version>
 	</parent>
 	<artifactId>spring-security-wechat-config</artifactId>
 	<name>Spring Security WeChat Config</name>
